@@ -62,3 +62,17 @@ var isVowel = function(letter){
 
   return b;
 };
+
+$(document).ready(function() {
+  $("form#translateform").submit(function(event) {
+
+    var text = $("input#inputstring").val();
+    var result = translator(text);
+
+    $('.translation').text(result);
+
+    $('#translation').show();
+
+    event.preventDefault();
+  });
+});

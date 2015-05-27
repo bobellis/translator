@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/scripts.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <title>Pig Latin Translator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class= "jumbotron">
+        <h1>Pig Latin Translator </h1>
+      </div>
+      <br><br>
+      <br>
+      <h2>For the sane person that doesnt speak pig latin,</h2>
+      <h2>you can input a sentence and it will tell you how to say it in pig latin.</h2>
+      <br><br>
+        <form id= "translateform">
+          <div class= "form-group">
+            <label for= "input-string"><h3> Enter your text here</h3></label>
+            <input id= "inputstring" type= "text" class= "form-control">
+            <br><br>
+          </div>
+          <button type="submit">Submit </button>
+
+      </form>
+
+      <div id= "translation">
+        <h2> Here is your translation:</h2>
+        <h1><span class= "translation"></span></h1> 
+      </div>
+
+    </div>
+
+
+  </body>
+</html>
