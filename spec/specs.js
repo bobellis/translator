@@ -7,7 +7,12 @@ describe('translator', function(){
     expect(translator("straight")).to.equal("aightstray")
   });
 
-  it('will move the frist consonant of a word to the end for multiple words', function(){
+  it('will move the first consonant of a word to the end for multiple words', function(){
     expect(translator("dog eat dog")).to.equal("ogday eatay ogday")
   });
+
+  it('will move the qu at the beginning of a word to the end for multiple words', function(){
+    expect(translator("squirrel quite aquire")).to.equal("irrelsquay itequay aquireay")
+  });
+
 });

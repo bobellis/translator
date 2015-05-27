@@ -14,19 +14,17 @@ var translator = function(string){
 
 
   splitString.forEach(function(word) {
-    if word.includes("qu")
 
-    else
     lettersArray = word.split("");
     cloneLettersArray = lettersArray.slice();
 
     for(var i = 0; i < lettersArray.length; i++){
 
       if (isVowel(lettersArray[i])){
-        if (lettersArray[i] === "u" && lettersArray[i-1] === "q"){
-          sub = lettersArray.slice(0,i);
+        if ((lettersArray[i] === "u") && (lettersArray[i-1] === "q")){
+          sub = lettersArray.slice(0, i + 1);
           sub = sub.join("") +"ay";
-          cloneLettersArray.splice(0,i);
+          cloneLettersArray.splice(0, i + 1);
           cloneLettersArray.push(sub);
           newWord = cloneLettersArray.join("");
           returnString.push(newWord);
@@ -49,20 +47,6 @@ var translator = function(string){
 };
 
 
-var isConsonant = function(letter){
-  var consonants = ["b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z"];
-  var e = 0;
-  var b = false;
-  for(var i = 0; i < consonants.length; i++) {
-
-    if(consonants[i] === letter) {
-        b = true;
-      }
-
-    }
-
-  return b;
-};
 
 var isVowel = function(letter){
   var vowels = ["a","e","i","o","u"];
@@ -78,28 +62,3 @@ var isVowel = function(letter){
 
   return b;
 };
-
-//   else
-//     concatString.push(lettersArray[i])
-//     lettersArray.shift()
-//   }
-//
-//
-//
-// }
-//
-//
-// else if(isConsonant(lettersArray[0])) {
-//
-//   firstLetter = lettersArray.shift();
-//   changeLetter = firstLetter.concat("ay");
-//   lettersArray.push(changeLetter);
-//   var returnWord = lettersArray.join("");
-//   returnString.push(returnWord);
-//   returnWord = "";
-// }
-//
-// else{
-//   word = word.concat('ay');
-//   returnString.push(word)
-//}
